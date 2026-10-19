@@ -3,18 +3,20 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
 android {
-    namespace = "com.example.localvisionchat"
-    compileSdk = 35
-    defaultConfig {
-        applicationId = "com.example.localvisionchat"
-        minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "0.1"
+    // Keep your existing Android configuration here.
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    buildFeatures { compose = true }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
+
 dependencies {
     implementation("com.google.ai.edge.litertlm:litertlm-android:latest.release")
     implementation(platform("androidx.compose:compose-bom:2024.12.01"))
