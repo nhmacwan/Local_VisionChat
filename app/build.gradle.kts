@@ -4,11 +4,11 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 android {
-    namespace = "YOUR_EXISTING_NAMESPACE"
+    namespace = "com.nhmacwan.localvisionchat"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "YOUR_EXISTING_APPLICATION_ID"
+        applicationId = "com.nhmacwan.localvisionchat"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
