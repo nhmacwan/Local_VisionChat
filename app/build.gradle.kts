@@ -5,7 +5,16 @@ plugins {
 }
 
 android {
-    // Keep your existing Android configuration here.
+    namespace = "YOUR_EXISTING_NAMESPACE"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "YOUR_EXISTING_APPLICATION_ID"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
