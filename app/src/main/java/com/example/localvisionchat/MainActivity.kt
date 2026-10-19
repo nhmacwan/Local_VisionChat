@@ -1,4 +1,4 @@
-package com.example.localvisionchat
+package com.nhmacwan.localvisionchat
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -174,7 +174,9 @@ private suspend fun runModel(
                 Contents.of(Content.Text(prompt))
             }
             val result = conversation.sendMessage(contents)
-            result.text
+            result.contents.contents
+                .filterIsInstance<Content.Text>()
+                .joinToString("") { it.text }
         }
     } finally {
         engine.close()
